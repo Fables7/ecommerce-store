@@ -5,17 +5,17 @@ import { ShoppingCart } from "lucide-react";
 import Currency from "./ui/Currency";
 import Button from "./ui/Button";
 import { Product } from "@/types";
-// import useCart from "@/hooks/use-cart";
+import useCart from "@/hooks/useCart";
 
 interface InfoProps {
   data: Product;
 }
 
 const Info = ({ data }: InfoProps) => {
-  //   const cart = useCart();
+  const cart = useCart();
 
   const onAddToCart = () => {
-    // cart.addItem(data);
+    cart.addItem(data);
   };
 
   return (
